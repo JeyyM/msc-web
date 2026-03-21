@@ -15,7 +15,7 @@ export default function Footer() {
                 <div className="bg-[#00A4EF]"></div>
                 <div className="bg-[#FFB900]"></div>
               </div>
-              <span className="font-bold text-xl tracking-tight text-white">
+              <span className="font-display font-bold text-xl tracking-tight text-white">
                 DLSU <span className="text-[#00A4EF]">MSC</span>
               </span>
             </div>
@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold tracking-wider uppercase text-gray-300 mb-6">Quick Links</h3>
+            <h3 className="font-display text-sm font-semibold tracking-wider uppercase text-gray-300 mb-6">Quick Links</h3>
             <ul className="space-y-4">
               <li><Link to="/about" className="text-gray-400 hover:text-white text-sm transition-colors">About Us</Link></li>
               <li><Link to="/events" className="text-gray-400 hover:text-white text-sm transition-colors">Events</Link></li>
@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold tracking-wider uppercase text-gray-300 mb-6">Contact</h3>
+            <h3 className="font-display text-sm font-semibold tracking-wider uppercase text-gray-300 mb-6">Contact</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-400 text-sm">
                 <Mail className="w-5 h-5 text-[#00A4EF] shrink-0" />
@@ -65,16 +65,18 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">
             &copy; {new Date().getFullYear()} DLSU Microsoft Student Clubs. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm text-gray-500">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <Link to="/admin/login" className="hover:text-white transition-colors">Admin Login</Link>
           </div>
         </div>
       </div>
     </footer>
   );
 }
+
