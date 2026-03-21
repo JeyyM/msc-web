@@ -26,7 +26,7 @@ export default function AdminLayout() {
     { name: 'Dashboard', href: '/admin', icon: LayoutDashboard },
     { name: 'Members', href: '/admin/members', icon: Users },
     { name: 'Events', href: '/admin/events', icon: Calendar },
-    { name: 'Publications', href: '/admin/publications', icon: FileText },
+    { name: 'Past Projects', href: '/admin/publications', icon: FileText },
     { name: 'Settings', href: '/admin/settings', icon: Settings },
   ];
 

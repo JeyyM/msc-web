@@ -21,7 +21,7 @@ export default function Dashboard() {
       link: '/admin/events',
     },
     {
-      name: 'Publications',
+      name: 'Past Projects',
       value: 12, // Placeholder
       icon: FileText,
       color: 'bg-[#FFB900]',

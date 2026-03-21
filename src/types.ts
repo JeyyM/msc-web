@@ -27,3 +27,17 @@ export interface Event {
   displayOrder: number;
   color?: string;
 }
+
+export interface Project {
+  id: string;
+  title: string;
+  category: string;
+  imageUrl: string;
+  description: string;
+  tags: string[];          // stored as text[] in Postgres
+  link: string;
+  github: string;
+  isFeatured: boolean;     // true → sticky showcase card; false → bottom grid
+  displayOrder: number;
+  color?: string;
+}

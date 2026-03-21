@@ -4,8 +4,8 @@ import { motion } from 'motion/react';
 import { Eye, EyeOff, Lock, Mail, ArrowRight } from 'lucide-react';
 
 export default function AdminLogin() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('admin@dlsu.edu.ph');
+  const [password, setPassword] = useState('admin123');
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
