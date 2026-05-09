@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 import { useProjects } from '../hooks/useSupabaseData';
-
+//
 const COLORS = ['#00A4EF', '#FFB900', '#7FBA00', '#F25022'];
 
 export default function Projects() {
