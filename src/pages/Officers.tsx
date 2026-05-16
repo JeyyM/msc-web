@@ -69,6 +69,7 @@ export default function Officers() {
           member.category === 'Member' &&
           member.committee === m.committee
         )
+        .sort((a, b) => a.fullName.localeCompare(b.fullName))
         .map(member => ({
           id: member.id,
           name: member.fullName,
@@ -83,18 +84,50 @@ export default function Officers() {
   ].filter(row => row.officers.length > 0);
 
   return (
-    <div className="min-h-screen bg-white pt-32 pb-32 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-screen bg-white pt-32 pb-32 overflow-hidden">
+      <motion.div
+        animate={{ y: [0, 28, 0], x: [0, -20, 0], rotate: [0, -8, 0] }}
+        transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
+        className="pointer-events-none absolute top-80 -right-28 h-[28rem] w-[28rem] rounded-full bg-[#7FBA00]/12 blur-3xl"
+      />
+      <motion.div
+        animate={{ y: [0, -18, 0], scale: [1, 1.08, 1] }}
+        transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
+        className="pointer-events-none absolute bottom-20 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-[#FFB900]/12 blur-3xl"
+      />
+      <motion.div
+        animate={{ y: [0, -18, 0], rotate: [12, 28, 12] }}
+        transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+        className="pointer-events-none absolute left-[8%] top-48 h-20 w-20 rounded-2xl border-2 border-[#F25022]/70 bg-[#F25022]/5 shadow-xl shadow-[#F25022]/15"
+      />
+      <motion.div
+        animate={{ y: [0, 22, 0], rotate: [-10, -24, -10] }}
+        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+        className="pointer-events-none absolute right-[12%] top-[34rem] h-28 w-28 rounded-3xl border-2 border-[#00A4EF]/70 bg-[#00A4EF]/5 shadow-xl shadow-[#00A4EF]/15"
+      />
+      <motion.div
+        animate={{ x: [0, 18, 0], y: [0, -12, 0], rotate: [8, -8, 8] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+        className="pointer-events-none absolute bottom-44 left-[14%] h-24 w-24 rounded-2xl border-2 border-[#7FBA00]/70 bg-[#7FBA00]/5 shadow-xl shadow-[#7FBA00]/15"
+      />
+      <motion.div
+        animate={{ x: [0, -14, 0], y: [0, 14, 0], rotate: [-16, 4, -16] }}
+        transition={{ duration: 17, repeat: Infinity, ease: "easeInOut" }}
+        className="pointer-events-none absolute bottom-24 right-[18%] h-16 w-16 rounded-xl border-2 border-[#FFB900]/80 bg-[#FFB900]/5 shadow-xl shadow-[#FFB900]/15"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-grid-pattern opacity-30" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center max-w-3xl mx-auto mb-24"
         >
           <h1 className="font-display text-5xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
-            Meet the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A4EF] to-[#FFB900]">Team</span>
+            Meet the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A4EF] to-[#FFB900]">Officers</span>
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed font-light">
-            The passionate student leaders driving innovation and community at DLSU Microsoft Student Clubs.
+            Meet the student leaders shaping a culture of innovation, collaboration, and growth at DLSU Microsoft Student Communities.
           </p>
         </motion.div>
 
@@ -136,6 +169,15 @@ export default function Officers() {
                       transition={{ delay: idx * 0.1, duration: 0.6 }}
                       className="w-full max-w-[18rem] sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)]"
                     >
+                      <div className="mb-3 flex min-h-10 items-end justify-center text-center">
+                        <h3
+                          className="font-display text-sm font-bold uppercase tracking-wider"
+                          style={{ color: officer.color }}
+                        >
+                          {officer.committee}
+                        </h3>
+                      </div>
+
                       <div className="group relative aspect-[3/4] overflow-hidden rounded-[2rem] shadow-xl shadow-gray-900/10">
                         <img
                           src={officer.image}
