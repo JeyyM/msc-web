@@ -119,6 +119,39 @@ export default function About() {
               </div>
             </div>
 
+            {/* Credits */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              whileHover={{ y: -8 }}
+              transition={{ duration: 0.3 }}
+              className="group bg-[#F8F9FB] p-10 md:p-14 rounded-[2.5rem] border border-gray-100 hover:shadow-2xl hover:shadow-[#00A4EF]/10 transition-shadow duration-500"
+            >
+              <p className="text-sm font-bold uppercase tracking-wider text-[#00A4EF] mb-3 transition-colors duration-300 group-hover:text-[#007A53]">
+                Developed By:
+              </p>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                Technology Development Committee
+              </h2>
+
+              <div className="space-y-6">
+                <div>
+                  <h3 className="font-display text-2xl font-bold text-gray-900 mb-2">
+                    Project Heads & Lead Developers
+                  </h3>
+                  <div className="h-1 w-20 rounded-full bg-[#00A4EF] transition-all duration-500 group-hover:w-36" />
+                </div>
+
+                <div>
+                  <h3 className="font-display text-2xl font-bold text-gray-900 mb-2">
+                    Developers
+                  </h3>
+                  <div className="h-1 w-20 rounded-full bg-[#7FBA00] transition-all duration-500 group-hover:w-36" />
+                </div>
+              </div>
+            </motion.div>
+
           </div>
         </div>
       </div>
