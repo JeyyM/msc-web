@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Calendar, MapPin, Clock, ArrowRight } from 'lucide-react';
-import { useEvents } from '../hooks/useSupabaseData';
+import { useEvents } from '../hooks/useSupabaseData'; 
+// import { useEvents } from '../hooks/useSupabaseData'; paremove nalang chat once actual deployment na 
+
 
 // Fallback colour palette cycled by index
 const COLORS = ['#00A4EF', '#FFB900', '#7FBA00', '#F25022'];
@@ -9,7 +11,6 @@ const COLORS = ['#00A4EF', '#FFB900', '#7FBA00', '#F25022'];
 export default function Events() {
   const { events: rawEvents, loading, error } = useEvents();
 
-  // Only show non-hidden events, sorted by displayOrder
   const events = rawEvents
     .filter(e => e.status !== 'Hidden')
     .map((e, idx) => ({

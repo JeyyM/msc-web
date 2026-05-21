@@ -1,4 +1,4 @@
-import { Person, Event } from '../types';
+import { Person, Event, Project } from '../types';
 
 export const mockMembers: Person[] = [
   {
@@ -141,3 +141,46 @@ export const mockEvents: Event[] = [
     color: '#F25022'
   }
 ];
+
+export const mockProjects: Project[] = [
+  {
+    id: '1',
+    title: 'Project Alpha',
+    category: 'Web Development',
+    imageUrl: 'https://picsum.photos/seed/alpha/800/600',
+    description: 'A comprehensive web application for student tracking and management within the club.',
+    tags: ['React', 'TypeScript', 'Node.js'],
+    link: 'https://alpha.example.com',
+    github: 'https://github.com/msc/alpha',
+    isFeatured: true,
+    displayOrder: 1,
+    color: '#00A4EF'
+  },
+  {
+    id: '2',
+    title: 'Azure Bot',
+    category: 'AI & Bot',
+    imageUrl: 'https://picsum.photos/seed/bot/800/600',
+    description: 'An intelligent chatbot for student inquiries, powered by Azure Bot Service and OpenAI.',
+    tags: ['Azure', 'Python', 'NLP'],
+    link: '',
+    github: 'https://github.com/msc/azure-bot',
+    isFeatured: true,
+    displayOrder: 2,
+    color: '#7FBA00'
+  },
+  {
+    id: '3',
+    title: 'MSC Portal',
+    category: 'Internal Tool',
+    imageUrl: 'https://picsum.photos/seed/portal/800/600',
+    description: 'A centralized portal for members to access resources, announcements, and event registration.',
+    tags: ['.NET', 'Azure SQL', 'React'],
+    link: 'https://portal.example.com',
+    github: '',
+    isFeatured: false,
+    displayOrder: 3,
+    color: '#FFB900'
+  }
+];
+
